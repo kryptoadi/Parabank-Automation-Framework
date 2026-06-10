@@ -24,7 +24,7 @@ public class RegistrationTest extends BaseTest {
             String password) {
 
         RegistrationPage register =
-                new RegistrationPage(driver);
+                new RegistrationPage(BaseTest.getDriver());
 
         register.clickRegisterLink();
 

@@ -19,14 +19,14 @@ public class OpenNewAccountTest extends BaseTest {
                               String password) throws InterruptedException {
 
         LoginPage login =
-                new LoginPage(driver);
+                new LoginPage(BaseTest.getDriver());
 
         login.enterUsername(username);
         login.enterPassword(password);
         login.clickLogin();
 
         OpenNewAccountPage account =
-                new OpenNewAccountPage(driver);
+                new OpenNewAccountPage(BaseTest.getDriver());
 
         account.openNewAccountPage();
 

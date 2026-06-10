@@ -43,7 +43,7 @@ public class TestListener
 
         String screenshotPath =
                 ScreenshotUtils.captureScreenshot(
-                        BaseTest.driver,
+                		BaseTest.getDriver(),
                         result.getName());
 
         try {

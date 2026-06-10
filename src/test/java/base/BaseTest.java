@@ -10,80 +10,81 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ConfigReader;
 
 public class BaseTest {
-	private static final Logger logger =
-	        LogManager.getLogger(BaseTest.class);
-	public static WebDriver driver;
-	@BeforeMethod
-	public void setup() {
 
-	    String browser =
-	            ConfigReader.getProperty("browser");
+    private static final Logger logger =
+            LogManager.getLogger(BaseTest.class);
 
-	    logger.info("Launching Browser : {}", browser);
+    private static ThreadLocal<WebDriver> driver =
+            new ThreadLocal<>();
 
-	    switch(browser.toLowerCase()) {
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
 
-	        case "chrome":
+    @BeforeMethod
+    @Parameters("browser")
+    public void setup(@Optional("") String browser) {
 
-	            WebDriverManager.chromedriver().setup();
-	            driver = new ChromeDriver();
-	            break;
+        if (browser == null || browser.trim().isEmpty()) {
+            browser = ConfigReader.getProperty("browser");
+        }
 
-	        case "edge":
+        logger.info("Launching Browser: {}", browser);
 
-	            WebDriverManager.edgedriver().setup();
-	            driver = new EdgeDriver();
-	            break;
+        WebDriver localDriver = null;
 
-	        case "firefox":
+        switch (browser.toLowerCase()) {
 
-	            WebDriverManager.firefoxdriver().setup();
-	            driver = new FirefoxDriver();
-	            break;
+        case "chrome":
+            localDriver = new ChromeDriver();
+            break;
 
-	        default:
+        case "edge":
 
-	            logger.warn("Invalid browser. Launching Chrome");
-	            WebDriverManager.chromedriver().setup();
-	            driver = new ChromeDriver();
-	    }
+            System.setProperty(
+                "webdriver.edge.driver",
+                ConfigReader.getProperty("edgeDriverPath"));
 
-	    driver.manage().window().maximize();
+            localDriver = new EdgeDriver();
+            break;
 
-	    driver.manage().timeouts().implicitlyWait(
-	            Duration.ofSeconds(
-	                    Integer.parseInt(
-	                            ConfigReader.getProperty("implicitWait"))));
+        case "firefox":
+            localDriver = new FirefoxDriver();
+            break;
+        }
 
-	    logger.info("Opening URL : {}",
-	            ConfigReader.getProperty("url"));
+        driver.set(localDriver);
 
-	    driver.get(
-	            ConfigReader.getProperty("url"));
-	}
-	@AfterMethod
-	public void tearDown() {
+        getDriver().manage().window().maximize();
 
-	    try {
+        getDriver().manage().timeouts().implicitlyWait(
+                Duration.ofSeconds(
+                        Integer.parseInt(
+                                ConfigReader.getProperty("implicitWait"))));
 
-	        Thread.sleep(4000);
+        String url = ConfigReader.getProperty("url");
 
-	    } catch (InterruptedException e) {
+        logger.info("Opening URL: {}", url);
 
-	        logger.error("Interrupted Exception", e);
-	    }
+        getDriver().get(url);
+    }
 
-	    if(driver != null) {
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
 
-	        logger.info("Closing Browser");
+        if (getDriver() != null) {
 
-	        driver.quit();
-	    }
-	}
-	
+            logger.info("Closing Browser");
+
+            getDriver().quit();
+
+            driver.remove();
+        }
+    }
 }

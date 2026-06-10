@@ -22,7 +22,7 @@ public class TransferFundsTest extends BaseTest {
             String amount) throws InterruptedException {
 
         LoginPage login =
-                new LoginPage(driver);
+                new LoginPage(BaseTest.getDriver());
 
         login.enterUsername(username);
 
@@ -31,7 +31,7 @@ public class TransferFundsTest extends BaseTest {
         login.clickLogin();
 
         TransferFundsPage transfer =
-                new TransferFundsPage(driver);
+                new TransferFundsPage(BaseTest.getDriver());
 
         System.out.println("Step 1");
         transfer.openTransferFunds();
@@ -54,7 +54,7 @@ public class TransferFundsTest extends BaseTest {
 
         Thread.sleep(5000);
 
-        System.out.println("Current URL = " + driver.getCurrentUrl());
+        System.out.println("Current URL = " + BaseTest.getDriver().getCurrentUrl());
 
         System.out.println(transfer.getPageText());
     }

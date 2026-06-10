@@ -18,14 +18,14 @@ public class AccountOverviewTest extends BaseTest {
             String password) {
 
         LoginPage login =
-                new LoginPage(driver);
+                new LoginPage(BaseTest.getDriver());
 
         login.enterUsername(username);
         login.enterPassword(password);
         login.clickLogin();
 
         AccountOverviewPage accountPage =
-                new AccountOverviewPage(driver);
+                new AccountOverviewPage(BaseTest.getDriver());
 
         Assert.assertTrue(
                 accountPage.isAccountsOverviewDisplayed());

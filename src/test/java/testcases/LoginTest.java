@@ -17,7 +17,7 @@ public class LoginTest extends BaseTest {
                             String password) {
 
         LoginPage login =
-                new LoginPage(driver);
+                new LoginPage(BaseTest.getDriver());
 
         login.enterUsername(username);
 

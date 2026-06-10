@@ -1,0 +1,9 @@
+services:
+
+  parabank-framework:
+
+    build: .
+
+    container_name: parabank-framework
+
+    command: mvn test

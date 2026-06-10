@@ -37,7 +37,7 @@ public class BillPayTest extends BaseTest {
         System.out.println("Amount     : " + amount);
         System.out.println("===========================");
 
-        LoginPage login = new LoginPage(driver);
+        LoginPage login = new LoginPage(BaseTest.getDriver());
 
         login.enterUsername(
                 ExcelUtils.getCellData("Login", 1, 0));
@@ -48,7 +48,7 @@ public class BillPayTest extends BaseTest {
         login.clickLogin();
 
         BillPayPage billPay =
-                new BillPayPage(driver);
+                new BillPayPage(BaseTest.getDriver());
 
         billPay.openBillPayPage();
 
@@ -72,7 +72,7 @@ public class BillPayTest extends BaseTest {
         }
 
         String pageText =
-                driver.findElement(By.tagName("body"))
+        		BaseTest.getDriver().findElement(By.tagName("body"))
                         .getText();
 
         System.out.println(pageText);
