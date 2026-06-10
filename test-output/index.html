@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Parabank_Suite" class="navigator-link">
+              <span class="suite-name border-passed">Parabank Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Parabank_Suite" class="navigator-link ">
+                    <span>C:\Users\krraj\eclipse-workspace-new\Capstone-framework\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Parabank_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Parabank_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Parabank_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Parabank_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Parabank_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Parabank_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">6 methods,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Parabank_Suite" class="hide-methods passed suite-Parabank_Suite"> (hide)</a> <!-- hide-methods passed suite-Parabank_Suite -->
+                      <a href="#" panel-name="suite-Parabank_Suite" class="show-methods passed suite-Parabank_Suite"> (show)</a> <!-- show-methods passed suite-Parabank_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Parabank_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Parabank_Suite" title="testcases.OpenNewAccountTest" class="method navigator-link" hash-for-method="createAccount(adi123, Password123)">createAccount(adi123, Password123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Parabank_Suite" title="testcases.AccountOverviewTest" class="method navigator-link" hash-for-method="verifyAccountOverview(adi123, Password123)">verifyAccountOverview(adi123, Password123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Parabank_Suite" title="testcases.BillPayTest" class="method navigator-link" hash-for-method="verifyBillPayment(Electricity, Main Road, Delhi, Delhi, 110001, 9876543210, 14454, 50)">verifyBillPayment(Electricity, Main Road, Delhi, Delhi, 110001, 9876543210, 14454, 50)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Parabank_Suite" title="testcases.LoginTest" class="method navigator-link" hash-for-method="verifyLogin(adi123, Password123)">verifyLogin(adi123, Password123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Parabank_Suite" title="testcases.RegistrationTest" class="method navigator-link" hash-for-method="verifyRegistration(John, Doe, Main Road, Delhi, Delhi, 110001, 9876543210, 123456789, adi123, Password123)">verifyRegistration(John, Doe, Main Road, Delhi, Delhi, 110001, 9876543210, 123456789, adi123, Password123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Parabank_Suite" title="testcases.TransferFundsTest" class="method navigator-link" hash-for-method="verifyTransferFunds(adi123, Password123, 100)">verifyTransferFunds(adi123, Password123, 100)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Parabank_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Parabank_Suite" class="panel Parabank_Suite">
+          <div class="suite-Parabank_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.AccountOverviewTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAccountOverview(adi123, Password123)">
+                  </a> <!-- verifyAccountOverview(adi123, Password123) -->
+                  <span class="method-name">verifyAccountOverview</span>
+                  <span class="parameters">(adi123,Password123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parabank_Suite-class-passed -->
+          <div class="suite-Parabank_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.OpenNewAccountTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createAccount(adi123, Password123)">
+                  </a> <!-- createAccount(adi123, Password123) -->
+                  <span class="method-name">createAccount</span>
+                  <span class="parameters">(adi123,Password123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parabank_Suite-class-passed -->
+          <div class="suite-Parabank_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogin(adi123, Password123)">
+                  </a> <!-- verifyLogin(adi123, Password123) -->
+                  <span class="method-name">verifyLogin</span>
+                  <span class="parameters">(adi123,Password123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parabank_Suite-class-passed -->
+          <div class="suite-Parabank_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.RegistrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRegistration(John, Doe, Main Road, Delhi, Delhi, 110001, 9876543210, 123456789, adi123, Password123)">
+                  </a> <!-- verifyRegistration(John, Doe, Main Road, Delhi, Delhi, 110001, 9876543210, 123456789, adi123, Password123) -->
+                  <span class="method-name">verifyRegistration</span>
+                  <span class="parameters">(John,Doe,Main Road,Delhi,Delhi,110001,9876543210,123456789,adi123,Password123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parabank_Suite-class-passed -->
+          <div class="suite-Parabank_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.BillPayTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBillPayment(Electricity, Main Road, Delhi, Delhi, 110001, 9876543210, 14454, 50)">
+                  </a> <!-- verifyBillPayment(Electricity, Main Road, Delhi, Delhi, 110001, 9876543210, 14454, 50) -->
+                  <span class="method-name">verifyBillPayment</span>
+                  <span class="parameters">(Electricity,Main Road,Delhi,Delhi,110001,9876543210,14454,50)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parabank_Suite-class-passed -->
+          <div class="suite-Parabank_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.TransferFundsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTransferFunds(adi123, Password123, 100)">
+                  </a> <!-- verifyTransferFunds(adi123, Password123, 100) -->
+                  <span class="method-name">verifyTransferFunds</span>
+                  <span class="parameters">(adi123,Password123,100)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parabank_Suite-class-passed -->
+        </div> <!-- panel Parabank_Suite -->
+        <div panel-name="test-xml-Parabank_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\krraj\eclipse-workspace-new\Capstone-framework\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Parabank Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listeners.TestListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Parabank Tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.RegistrationTest&quot;/&gt;
+      &lt;class name=&quot;testcases.LoginTest&quot;/&gt;
+      &lt;class name=&quot;testcases.AccountOverviewTest&quot;/&gt;
+      &lt;class name=&quot;testcases.OpenNewAccountTest&quot;/&gt;
+      &lt;class name=&quot;testcases.TransferFundsTest&quot;/&gt;
+      &lt;class name=&quot;testcases.BillPayTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Parabank Tests --&gt;
+&lt;/suite&gt; &lt;!-- Parabank Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Parabank_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Parabank Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Parabank Tests (6 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Parabank_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Parabank Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Parabank_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Parabank Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Parabank_Suite');
+function tableData_Parabank_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(6);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyTransferFunds')
+data.setCell(0, 2, 'testcases.TransferFundsTest')
+data.setCell(0, 3, 7024);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyBillPayment')
+data.setCell(1, 2, 'testcases.BillPayTest')
+data.setCell(1, 3, 5179);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'createAccount')
+data.setCell(2, 2, 'testcases.OpenNewAccountTest')
+data.setCell(2, 3, 4895);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyAccountOverview')
+data.setCell(3, 2, 'testcases.AccountOverviewTest')
+data.setCell(3, 3, 1732);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyRegistration')
+data.setCell(4, 2, 'testcases.RegistrationTest')
+data.setCell(4, 3, 1653);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyLogin')
+data.setCell(5, 2, 'testcases.LoginTest')
+data.setCell(5, 3, 1132);
+window.suiteTableData['Parabank_Suite']= { tableData: data, tableDiv: 'times-div-Parabank_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <div id="times-div-Parabank_Suite">
+              </div> <!-- times-div-Parabank_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Parabank_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Parabank Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Parabank_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Parabank_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.RegistrationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyRegistration(John, Doe, Main Road, Delhi, Delhi, 110001, 9876543210, 123456789, adi123, Password123)</span>
+                <span class="method-start">3552 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">5213 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">9431 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogin(adi123, Password123)</span>
+                <span class="method-start">11743 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">12875 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.AccountOverviewTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">17085 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAccountOverview(adi123, Password123)</span>
+                <span class="method-start">19870 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">21602 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.OpenNewAccountTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">25824 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createAccount(adi123, Password123)</span>
+                <span class="method-start">28574 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">33469 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.TransferFundsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">37713 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyTransferFunds(adi123, Password123, 100)</span>
+                <span class="method-start">39955 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">46979 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.BillPayTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">51269 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyBillPayment(Electricity, Main Road, Delhi, Delhi, 110001, 9876543210, 14454, 50)</span>
+                <span class="method-start">53983 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">59172 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
